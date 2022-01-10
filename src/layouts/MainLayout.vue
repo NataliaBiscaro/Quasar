@@ -6,6 +6,7 @@
           flat
           dense
           round
+          icon="mdi-menu"
           @click="toggleLeftDrawer"
         />
 
@@ -22,31 +23,17 @@
       show-if-above
       bordered
     >
-      <q-list>
         <q-toolbar class="bg-primary"/>
-        <q-item class = "bg-grey-3">
-            <q-item-section>
-              Lists
-            </q-item-section>
-              <q-item-section side>
-              <q-btn icon="mdi-plus" flat round size=sm />
+          <q-item class = "bg-grey-3">
+              <q-item-section>
+                Lists
               </q-item-section>
-        </q-item>
-        <q-item clickable>
-            <q-item-section side>
-              <q-icon color="negative" name="mdi-shopping"/>
-            </q-item-section>
-
-        <q-item-section class="text-grey-9">
-          Shopping List
-        </q-item-section >
-        <q-item-section side >
-            12
-        </q-item-section >
-        </q-item>
-      </q-list>
-    </q-drawer>
-
+                <q-item-section side>
+                <CreateTodoListButton/>
+                </q-item-section>
+          </q-item>
+        <TodoListsList/>
+      </q-drawer>
     <q-page-container>
       <router-view />
     </q-page-container>
@@ -56,12 +43,15 @@
 <script>
 
 import { defineComponent, ref } from 'vue'
+import CreateTodoListButton from 'src/components/CreateTodoListButton.vue'
+import TodoListsList from 'src/components/TodoListsList.vue'
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-
+    CreateTodoListButton,
+    TodoListsList
   },
 
   setup () {

@@ -6,7 +6,7 @@
       </q-item-section>
           <q-item-section> Go Shopping </q-item-section>
             <q-item-section side>
-              <q-btn size="sm" flat round icon="mdi-delete"></q-btn>
+              <DeleteTodoButton/>
             </q-item-section>
       </q-item>
   </q-list>
@@ -14,9 +14,11 @@
 
 <script>
 import UpdateTodoCheckbox from 'src/components/UpdateTodoCheckbox.vue'
+import DeleteTodoButton from 'src/components/DeleteTodoButton.vue'
 export default {
   components: {
-    UpdateTodoCheckbox
+    UpdateTodoCheckbox,
+    DeleteTodoButton
   }
 }
 </script>
