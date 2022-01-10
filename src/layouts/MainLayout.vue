@@ -25,11 +25,11 @@
     >
         <q-toolbar class="bg-primary"/>
           <q-item class = "bg-grey-3">
+              <CreateListButton/>
               <q-item-section>
                 Lists
               </q-item-section>
                 <q-item-section side>
-                <CreateTodoListButton/>
                 </q-item-section>
           </q-item>
         <TodoListsList/>
@@ -43,14 +43,14 @@
 <script>
 
 import { defineComponent, ref } from 'vue'
-import CreateTodoListButton from 'src/components/CreateTodoListButton.vue'
+import CreateListButton from 'src/components/CreateListButton.vue'
 import TodoListsList from 'src/components/TodoListsList.vue'
 
 export default defineComponent({
   name: 'MainLayout',
 
   components: {
-    CreateTodoListButton,
+    CreateListButton,
     TodoListsList
   },
 

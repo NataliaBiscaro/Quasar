@@ -20,7 +20,7 @@
 </template>
 
 <script>
-import CreateTodoButton from 'src/components/CreateTodoListButton.vue'
+import CreateTodoButton from 'src/components/CreateTodoButton.vue'
 import TodosList from 'src/components/TodosList.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
