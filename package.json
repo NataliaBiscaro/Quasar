@@ -17,7 +17,7 @@
     "vuex": "^4.0.1"
   },
   "devDependencies": {
-    "@babel/eslint-parser": "^7.13.14",
+    "@babel/eslint-parser": "^7.16.5",
     "@quasar/app": "^3.0.0",
     "eslint": "^7.14.0",
     "eslint-config-standard": "^16.0.2",

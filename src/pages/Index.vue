@@ -1,6 +1,6 @@
 <template>
 
-  <q-page class="row">
+  <q-page class="row page-bg" >
 
     <q-card class="col-xs-9">
       <q-toolbar>
@@ -8,25 +8,11 @@
           <template #append> <q-icon name = "mdi-magnify"/></template>
         </q-input>
       </q-toolbar>
-          <q-list bordered>
-            <q-item>
-              <q-item-section side>
-                <q-checkbox :model-value="true"></q-checkbox>
-              </q-item-section>
-                <q-item-section> Go Shopping </q-item-section>
-                <q-item-section side>
-                  <q-btn size="sm" flat round icon="mdi-delete"></q-btn>
-                </q-item-section>
-            </q-item>
-          </q-list>
+          <TodosList bordered/>
         </q-card>
         <div class='col-xs-3'>
           <q-toolbar class="bg-primary">
-            <q-btn
-              fab style="margin-bottom: -45px;"
-              class="q-ml-md"
-              color = 'green-4'
-              icon="mdi-plus"/>
+            <CreateTodoButton/>
           </q-toolbar>
         </div>
     </q-page>
@@ -34,9 +20,16 @@
 </template>
 
 <script>
+import CreateTodoButton from 'src/components/CreateTodoButton.vue'
+import TodosList from 'src/components/TodosList.vue'
 import { defineComponent } from 'vue'
 export default defineComponent({
+
   name: 'PageIndex',
+  components: {
+    CreateTodoButton,
+    TodosList
+  },
 
   data () {
     return {
@@ -45,3 +38,10 @@ export default defineComponent({
   }
 })
 </script >
+
+<style lang="scss">
+.page-bg{
+  background: $blue-1;
+}
+
+</style>
